@@ -84,7 +84,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="registrarButton" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#registrarButtonOnAction" prefHeight="40.0" prefWidth="115.0" text="Registrarse">
+      <Button fx:id="registrarButton" defaultButton="true" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#registrarButtonOnAction" prefHeight="40.0" prefWidth="115.0" text="Registrarse">
          <font>
             <Font size="18.0" />
          </font>
