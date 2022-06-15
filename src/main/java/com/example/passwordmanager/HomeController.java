@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+// Esta es la ventana del 'Home' - Tiene 3 ACCIONES: Agregar Cuenta, Editar Cuenta, Ir al sitio web
 public class HomeController {
 
+    // Acción (1) = Agregar Nueva Cuenta
     public void addAccountButtonOnAction(ActionEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("addAccount.fxml"));
@@ -23,4 +25,7 @@ public class HomeController {
         }
     }
 
+    // Acción (2) = Editar Cuenta
+
+    // Acción (3) = Ir al sitio web
 }

@@ -21,6 +21,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+// Esta es la ventana de 'Registro de Cuenta' - Tiene 2 ACCIONES: Aceptar y Cancelar
 public class RegisterController implements Initializable {
 
     @FXML
@@ -60,8 +61,6 @@ public class RegisterController implements Initializable {
         Image logoRegistro = new Image(logoRegistroFile.toURI().toString());
         logoRegistroImageView.setImage(logoRegistro);
     }
-
-    // Esta ventana puede realizar un total de 2 acciones:
 
     // Acción (1) = Registrar un nuevo usuario
     public void registrarButtonOnAction(ActionEvent event) {

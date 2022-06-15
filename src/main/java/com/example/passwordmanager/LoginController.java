@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+// Esta es la ventana del 'Login' - Tiene 4 ACCIONES: Iniciar Sesión, Salir, Cambiar de Contraseña y Registrarse
 public class LoginController implements Initializable {
     @FXML
     private Button ingresarButton;
@@ -47,8 +48,6 @@ public class LoginController implements Initializable {
         Image logoCandado = new Image(logoCandadoFile.toURI().toString());
         logoCandadoImageView.setImage(logoCandado);
     }
-
-    // Esta ventana puede hacer 4 acciones:
 
     // Acción (1) = Ingresar a la aplicación con un usuario ya existente
     public void loginButtonOnAction(ActionEvent event) {
