@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwordmanager.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="logoUniversidadImageView" fitHeight="230.0" fitWidth="230.0" layoutY="85.0">
+               <image>
+                  <Image url="@../../../../../../images/logo.uaa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="360.0" style="-fx-background-color: #132F6D;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="56.0" layoutY="125.0" style="-fx-text-fill: #FDFEFE;" text="Bienvenido a Password Manager" textFill="#0a0a0a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutY="159.0" prefHeight="241.0" prefWidth="370.0" style="-fx-background-color: #D3D3D3;">
+               <children>
+                  <Label contentDisplay="CENTER" layoutX="25.0" layoutY="40.0" prefHeight="25.0" text="Email">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" layoutX="95.0" layoutY="40.0" prefHeight="25.0" prefWidth="250.0" promptText="Email" />
+                  <Label contentDisplay="CENTER" layoutX="15.0" layoutY="80.0" prefHeight="25.0" text="Contraseña">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="ingresarPasswordField" layoutX="95.0" layoutY="80.0" prefHeight="25.0" prefWidth="250.0" promptText="Contraseña" />
+                  <Hyperlink fx:id="olvidarPasswordHyperlink" layoutX="95.0" layoutY="110.0" style="-fx-text-fill: #00008B;" text="Olvidé mi contraseña" />
+                  <Hyperlink fx:id="registrarHyperlink" layoutX="255.0" layoutY="110.0" onAction="#crearCuenta" style="-fx-text-fill: #00008B;" text="Registrarse" />
+                  <Label fx:id="ingresoMensajeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="134.0" prefHeight="19.0" prefWidth="293.0" style="-fx-text-fill: #D22B2B;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ingresarButton" defaultButton="true" layoutX="100.0" layoutY="160.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="180.0" text="Ingresar">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="salirButton" layoutX="100.0" layoutY="200.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="30.0" prefWidth="180.0" text="Salir">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="logoCandadoImageView" fitHeight="100.0" fitWidth="100.0" layoutX="135.0" layoutY="15.0">
+               <image>
+                  <Image url="@../../../../../../images/logo.lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
