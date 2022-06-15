@@ -29,6 +29,11 @@
             </Label>
          </children>
       </AnchorPane>
+      <Button layoutX="25.0" layoutY="110.0" mnemonicParsing="false" prefHeight="40.0" text="Editar Cuenta">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
       <Button layoutX="325.0" layoutY="110.0" mnemonicParsing="false" prefHeight="40.0" text="Agregar Cuenta">
          <font>
             <Font size="18.0" />
@@ -36,7 +41,7 @@
       </Button>
       <TabPane layoutX="25.0" layoutY="160.0" prefHeight="200.0" prefWidth="450.0" style="-fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="380.0" tabMaxWidth="500.0">
         <tabs>
-          <Tab text="Aplicacion1">
+          <Tab text="Facebook">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="448.0">
                      <children>
@@ -45,7 +50,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="180.0" layoutY="20.0" prefHeight="35.0" prefWidth="170.0" text="nacho@hotmail.com">
+                        <Label layoutX="180.0" layoutY="20.0" prefHeight="35.0" prefWidth="170.0" text="nacho@uaa.com">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -55,7 +60,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="180.0" layoutY="70.0" prefWidth="170.0" text="bokitaFACEBOOK">
+                        <Label layoutX="180.0" layoutY="70.0" prefHeight="35.0" prefWidth="170.0" text="facebookUAA">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -65,7 +70,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Hyperlink layoutX="180.0" layoutY="120.0" prefHeight="1.0" prefWidth="170.0" text="Aplicacion1">
+                        <Hyperlink layoutX="180.0" layoutY="120.0" prefHeight="1.0" prefWidth="170.0" text="Facebook">
                            <font>
                               <Font size="18.0" />
                            </font>
