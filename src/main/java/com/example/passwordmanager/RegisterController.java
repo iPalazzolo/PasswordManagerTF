@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ResourceBundle;
@@ -164,7 +166,7 @@ public class RegisterController implements Initializable {
         String nombre = nombreTextField.getText();
         String apellido = apellidoTextField.getText();
         String email = emailTextField.getText();
-        String password = setPasswordField.getText();
+        String password = hashPassword(setPasswordField.getText());
 
         // Escribe los valores en una línea de comando/código válida para MySQL Workbench
         String insertarCampos = "INSERT INTO usuario(nombre, apellido, email, password) VALUES ('";
@@ -184,7 +186,22 @@ public class RegisterController implements Initializable {
     }
 
     // 1. Encripta la contraseña ingresada por el usuario
-    public void hashPassword(String password) {
+    public String hashPassword(String password) {
+
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+            messageDigest.update(password.getBytes());
+            byte [] resultByteArray = messageDigest.digest();
+            StringBuilder sb = new StringBuilder();
+
+            for(byte b : resultByteArray){
+                sb.append(String.format("%02x",b));
+            }
+            return sb.toString();
+        } catch(NoSuchAlgorithmException e){
+            e.printStackTrace();
+        }
+        return "";
     }
 
     // 1. Nueva ventana generada al crear nuevo usuario de manera exitosa

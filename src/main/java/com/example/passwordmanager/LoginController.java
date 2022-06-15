@@ -61,12 +61,13 @@ public class LoginController implements Initializable {
 
     // 1. Conexión entre los datos llenados por el usuario con la base de datos
     public void validarIngreso() {
+        RegisterController rc = new RegisterController();   // <- Para usar el método de encriptado
         // Conecta con la base de datos
         DBConnection conectarAhora = new DBConnection();
         Connection conectarBD = conectarAhora.getConnection();
         // Asigna el email y la contraseña ingresada por el usuario a variables locales
         String email = emailTextField.getText();
-        String password = ingresarPasswordField.getText();
+        String password = rc.hashPassword(ingresarPasswordField.getText());
         // Crea un String que servirá como línea de código para MySQL Workbench con los datos adquiridos
         String verificarIngreso = "SELECT count(1) FROM usuario WHERE email = '" + email + "' AND password = '" + password + "'";
 
