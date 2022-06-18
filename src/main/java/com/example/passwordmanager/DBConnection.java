@@ -9,7 +9,7 @@ public class DBConnection {
     public Connection getConnection() {
         String bdNombre = "password_manager";
         String bdUsuario = "root";
-        String bdPassword = "alsina719";
+        String bdPassword = "";
         String bdServer = "localhost";
         String url = "jdbc:mysql://" + bdServer + "/" + bdNombre;
 
